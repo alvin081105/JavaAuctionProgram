@@ -18,7 +18,22 @@ repositories {
 }
 
 dependencies {
+	// Spring Boot 기본 의존성
 	implementation 'org.springframework.boot:spring-boot-starter'
+
+	// 스프링 웹 (REST API 구현을 위해 필요)
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// 스프링 데이터 JPA (데이터베이스 연동을 위해 필요)
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// MySQL 드라이버 (MySQL과의 연결을 위해 필요)
+	runtimeOnly 'mysql:mysql-connector-java'
+
+	// 스프링 보안 (사용자 인증 및 권한 관리)
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	// 테스트 관련 의존성
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
